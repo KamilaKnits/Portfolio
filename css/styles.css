@@ -22,9 +22,11 @@ c1121f (red)
     --secondary-color: #a74357;
     --shade3-color: #464c58;
     --shade4-color: #ada86b;
-    --shade5-color: #a74357;
     --shade6-color: #848365;
     --shade7-color:#2b2b2b;
+    --shade8-color: #fff;
+
+    
 
     /* Animation Colors*/
     --sun-start-color:#edc655;
@@ -79,6 +81,12 @@ h3 {
     text-align: center;
     
 }
+.about-me-page {
+    background-color: var(--shade8-color);
+}
+/* .work-page {
+    background-color: var(--shade4-color);
+} */
 
 a {
     color: var(--shade3-color);
@@ -87,7 +95,7 @@ a {
 
 a:visited {
     /* visited link*/
-    color: var(--shade5-color);
+    color: var(--secondary-color);
 }
 
 a:hover,
@@ -109,7 +117,7 @@ button, .button {
     /* takes the font from the outer container */
     font-family: inherit;
     /* styles the background color, font color, and text decoration (underline,etc) of the buttpn */
-    background-color: var(--primary-color);
+    background-color: var(--shade3-color);
     color: #fff;
     text-decoration: none;
     padding: 10px;
@@ -195,7 +203,7 @@ span{
     margin: 0;
 }}
 .grid__item {
-    background-color: var(--shade6-color);
+    background-color: var(--shade3-color);
      width: auto;
      min-height: auto;
      margin: 0;
