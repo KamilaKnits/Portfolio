@@ -42,33 +42,33 @@
     </header>
 
     <main>
+        <div class="contact-content">
+            <h1>Contact</h1>
 
-        <h1>Contact</h1>
+            <form action="" method="post" id="contact-form">
+                <label class="standard-label" for="contact-email">E-mail: </label>
+                <input type="email" id="contact-email" required>
 
-        <form action="" method="post" id="contact-form">
-            <label class="standard-label" for="contact-email">E-mail: </label>
-            <input type="email" id="contact-email" required>
+                <label class="standard-label" for="contact-tel">Telephone: </label>
+                <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-tel">
 
-            <label class="standard-label" for="contact-tel">Telephone: </label>
-            <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-tel">
+                <label class="standard-label" for="contact-message">Message: </label>
+                <textarea maxlength="240" required id="contact-message"></textarea>
 
-            <label class="standard-label" for="contact-message">Message: </label>
-            <textarea maxlength="240" required id="contact-message"></textarea>
-
-            <input type="submit" value="Send message">
-
-
-        </form>
+                <input type="submit" value="Send message">
 
 
+            </form>
+        </div>
 
-        <div>
+
+        <div class="contact-info">
             177a Bleeker Street<br>
             New York, NY 10012<br>
             <br>
 
             <a href="mailto:kayi5133@aol.com">Kayi5133@aol.com</a>
-            <a href="mailto:myemail@gmail.com">Contact me</a>
+            <!-- <a href="mailto:myemail@gmail.com">Contact me</a> -->
         </div>
 
     </main>
