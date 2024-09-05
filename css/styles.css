@@ -29,9 +29,9 @@ c1121f (red)
     
 
     /* Animation Colors*/
-    --sun-start-color:#edc655;
-    --sun-transition-color: #fcffad;
-    --sun-finish-color: #f76414;
+    --tree-start-color:#a74357;
+    --tree-transition-color: #edc655;
+    --tree-finish-color: #a74357;
 
     /* Font Style*/
     --body-font-style: normal;
@@ -167,6 +167,21 @@ span{
 * {
     box-sizing: border-box;
 }
+.contact-content {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+
+}
+.contact-info {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    justify-content: center; 
+}
 
 .page-header {
     display: flex;
@@ -217,37 +232,41 @@ span{
 
 @keyframes color-change {
     0% {
-        fill: var(--sun-start-color);
+        fill: var(--tree-start-color);
     }
     50% {
-        fill: var(--sun-transition-color);
+        fill: var(--tree-transition-color);
     }
     100% {
-        fill: var(--sun-finish-color);
+        fill: var(--tree-finish-color);
     }
 }
-.sun {
-    animation: 4s color-change infinite alternate linear;
+.tree-small {
+    animation: 5s color-change infinite alternate linear;
+} 
+
+.tree-big {
+  animation: 5s color-change infinite alternate linear;
 }
 
 @keyframes cloud-move {
     from {
-        transform: translate(0, 50px);
+        transform: translate(0, 25px);
     }
     to {
-        transform: translate(100px, 50px);
+        transform: translate(-400px, 25px);
     }
 }
 .cloud-front {
-    animation: 10s cloud-move infinite alternate linear;
+    animation: 40s cloud-move infinite alternate linear;
 }
 
 @keyframes cloud-move-reverse {
     from {
-        transform: translate(446px, 48px);
+        transform: translate(446px, 60px);
     }
     to {
-        transform: translate(100px, 48px);
+        transform: translate(100px, 60px);
     }
 }
 
