@@ -25,6 +25,8 @@ c1121f (red)
     --shade6-color: #848365;
     --shade7-color:#2b2b2b;
     --shade8-color: #fff;
+    --shade9-color: #000;
+   
 
     
 
@@ -84,18 +86,19 @@ h3 {
 .about-me-page {
     background-color: var(--shade8-color);
 }
-/* .work-page {
-    background-color: var(--shade4-color);
-} */
+.work-page {
+    text-align: center;
+    background-color: var(--primary-color);
+}
 
 a {
-    color: var(--shade3-color);
+    color: var(--shade9-color);
 
 }
 
 a:visited {
     /* visited link*/
-    color: var(--secondary-color);
+    color: var(--shade7-color);
 }
 
 a:hover,
@@ -106,7 +109,7 @@ a:focus {
 
 a:active {
     /* selected link*/
-    color: var(--shade6-color);
+    color: var(--shade9-color);
 
 }
 
@@ -117,7 +120,7 @@ button, .button {
     /* takes the font from the outer container */
     font-family: inherit;
     /* styles the background color, font color, and text decoration (underline,etc) of the buttpn */
-    background-color: var(--shade3-color);
+    background-color: var(--secondary-color);
     color: #fff;
     text-decoration: none;
     padding: 10px;
@@ -150,8 +153,8 @@ span{
 .profile-portrait {
     float: left;
     width: 250px;
-    margin-right: 40px;
-    border-radius: 50%;
+    margin-right: 20px;
+    border-radius: 20%;
 
 }
 .page-footer {
@@ -207,6 +210,8 @@ span{
 .grid__item {
     display:inline-block;
     width: 33%;
+   
+    
 }
 @supports (display:grid) {
 .grid {
@@ -215,13 +220,18 @@ span{
     Fractions are better than pixels- they are responsive*/
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
-    margin: 0;
+    max-width: 90%;
+    margin: 0 auto;
+    
+    
 }}
 .grid__item {
-    background-color: var(--shade3-color);
+    background-color: var(--secondary-color);
      width: auto;
      min-height: auto;
-     margin: 0;
+     margin: 0 auto;
+     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+     
 }
 .grid__item:last-child{
     grid-column-start: 3;
