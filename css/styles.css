@@ -17,23 +17,20 @@ c1121f (red)
 780000 (dark red)
 */
 :root {
-    /*Colors for the website*/
+    /* Colors for the website */
     --primary-color: #bbb;
-    --secondary-color: #a74357;
+    --secondary-color: #d87c9d;
     --shade3-color: #464c58;
     --shade4-color: #ada86b;
     --shade6-color: #848365;
     --shade7-color:#2b2b2b;
     --shade8-color: #fff;
-    --shade9-color: #000;
+    --shade9-color: #000; 
    
-
-    
-
     /* Animation Colors*/
-    --tree-start-color:#a74357;
+    /* --tree-start-color:#a74357;
     --tree-transition-color: #edc655;
-    --tree-finish-color: #a74357;
+    --tree-finish-color: #a74357; */
 
     /* Font Style*/
     --body-font-style: normal;
@@ -53,12 +50,14 @@ c1121f (red)
 
 }
 body {
-    font-family: "Sedan", serif;
+    font-family: "Electrolize", sans-serif;
+    /* font-family: "Limelight", sans-serif; */
+    /* font-family: "Sedan", serif; */
     font-weight: var(--body-font-weight);
     font-style: var(--body-font-style);
     font-size: var(--body-font-size);
     line-height: 1.5;
-    background-color: var(--primary-color);
+    
 
 }
 
@@ -83,16 +82,15 @@ h3 {
     text-align: center;
     
 }
-.about-me-page {
-    background-color: var(--shade8-color);
-}
+
 .work-page {
     text-align: center;
-    background-color: var(--primary-color);
+    
 }
 
 a {
     color: var(--shade9-color);
+    text-decoration: none;
 
 }
 
@@ -113,23 +111,34 @@ a:active {
 
 }
 
-button, .button {
-    /* overwrites browser defaults and resets the border */
-    border: none;
-    display: inline-block;
-    /* takes the font from the outer container */
-    font-family: inherit;
-    /* styles the background color, font color, and text decoration (underline,etc) of the buttpn */
+.email-submit-button {
+    padding: 12px 24px;
     background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    
+  }
+
+/* button, .button {
+    /* overwrites browser defaults and resets the border */
+    /* border: none;
+    display: inline-block; */
+    /* takes the font from the outer container */
+    /* font-family: inherit; */
+    /* styles the background color, font color, and text decoration (underline,etc) of the buttpn */
+    /* background-color: var(--shade3-color);
     color: #fff;
     text-decoration: none;
     padding: 10px;
-    border-radius: 3px;
+    border-radius: 3px; */
     /* gives the button a bottom border with a width of 2px, a type of solid, and a color in rgba format */
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    transition-duration: opacity 0.2s;
+    /* border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition-duration: opacity 0.2s; } */
 
-}
+
 
 button:hover,
 button:focus, 
@@ -139,22 +148,23 @@ button:focus,
     cursor: pointer;
     /* reduces the opacity of the button to 80% */
     opacity: 0.8;
+    transform: scale(1.03);
 
 }
-.button-secondary {
+/* .button-secondary {
     background-color: var(--secondary-color);
     color: var(--shade7-color);
-}
+} */
 span{
     font-size: 20px;
     font-weight: 700;
     text-shadow:#101c23 1px 0 10px;
 }
 .profile-portrait {
-    float: left;
-    width: 250px;
-    margin-right: 20px;
-    border-radius: 20%;
+    float: inline-start;
+    width: 400px;
+    margin-right: 40px;
+    border-radius: 100px;
 
 }
 .page-footer {
@@ -165,26 +175,48 @@ span{
 }
 .profile {
     max-width:700px;
+    max-height: 700px;
     margin: 0 auto;
 }
 * {
     box-sizing: border-box;
 }
-.contact-content {
+/* .contact-content {
     width: 100%;
     display: inline-block;
     text-align: center;
     margin: auto;
     justify-content: center;
 
-}
-.contact-info {
+} */
+/* .contact-info {
     width: 100%;
     display: inline-block;
     text-align: center;
     margin: auto;
     justify-content: center; 
-}
+} */
+
+#contact-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: "Electrolize", sans-serif;
+    background: var(--shade8-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .contact-page-heading {
+    text-align: center;
+  }
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
 
 .page-header {
     display: flex;
@@ -205,84 +237,56 @@ span{
 .navigation-list li {
     display: inline-block;
     margin-left: 15px;
+
 }
+
+.project-photo {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+
+}
+
+.project-photo img {
+    width: 45%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+     transition: transform 0.3s ease;
+}
+
+.project-photo img:hover {
+    transform: scale(1.03);
+  }
+
+
 /*start grid fallback*/
 .grid__item {
     display:inline-block;
-    width: 33%;
-   
+    width: 33%; 
     
 }
 @supports (display:grid) {
 .grid {
     display: grid;
-    /*grid-template-colums: 300px 300px 300px;
-    Fractions are better than pixels- they are responsive*/
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
+    gap: 20px;
     max-width: 90%;
     margin: 0 auto;
     
     
 }}
 .grid__item {
-    background-color: var(--secondary-color);
+    
      width: auto;
      min-height: auto;
      margin: 0 auto;
      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
      
 }
-.grid__item:last-child{
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
 
-@keyframes color-change {
-    0% {
-        fill: var(--tree-start-color);
-    }
-    50% {
-        fill: var(--tree-transition-color);
-    }
-    100% {
-        fill: var(--tree-finish-color);
-    }
-}
-.tree-small {
-    animation: 5s color-change infinite alternate linear;
-} 
 
-.tree-big {
-  animation: 5s color-change infinite alternate linear;
-}
-
-@keyframes cloud-move {
-    from {
-        transform: translate(0, 25px);
-    }
-    to {
-        transform: translate(-400px, 25px);
-    }
-}
-.cloud-front {
-    animation: 40s cloud-move infinite alternate linear;
-}
-
-@keyframes cloud-move-reverse {
-    from {
-        transform: translate(446px, 60px);
-    }
-    to {
-        transform: translate(100px, 60px);
-    }
-}
-
-.cloud-back {
-    animation: 34s cloud-move-reverse infinite alternate linear;
-}
 
 @media all and (max-width: 500px){
     .grid {
