@@ -49,6 +49,7 @@ c1121f (red)
     --h3-font-weight: 700;
 
 }
+
 body {
     font-family: "Electrolize", sans-serif;
     /* font-family: "Limelight", sans-serif; */
@@ -56,42 +57,35 @@ body {
     font-weight: var(--body-font-weight);
     font-style: var(--body-font-style);
     font-size: var(--body-font-size);
-    line-height: 1.5;
-    
-
+    line-height: 1.5;  
 }
 
 h1 {
     font-size: var(--h1-font-size);
-    font-weight: var(--h1-font-weight);
-    
+    font-weight: var(--h1-font-weight);   
 }
 
 h2 {
     font-size: var(--h2-font-size);
     font-weight: var(--h2-font-weight);
-
 }
 
 h3 {
     font-size: var(--h3-font-size);
     font-weight: var(--h3-font-weight);
-
 }
+
 .about-me{
-    text-align: center;
-    
+    text-align: center;   
 }
 
 .work-page {
-    text-align: center;
-    
+    text-align: center;   
 }
 
 a {
     color: var(--shade9-color);
     text-decoration: none;
-
 }
 
 a:visited {
@@ -118,27 +112,8 @@ a:active {
     border: none;
     border-radius: 8px;
     font-size: 16px;
-    cursor: pointer;
-    
+    cursor: pointer; 
   }
-
-/* button, .button {
-    /* overwrites browser defaults and resets the border */
-    /* border: none;
-    display: inline-block; */
-    /* takes the font from the outer container */
-    /* font-family: inherit; */
-    /* styles the background color, font color, and text decoration (underline,etc) of the buttpn */
-    /* background-color: var(--shade3-color);
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 3px; */
-    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in rgba format */
-    /* border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    transition-duration: opacity 0.2s; } */
-
-
 
 button:hover,
 button:focus, 
@@ -149,12 +124,8 @@ button:focus,
     /* reduces the opacity of the button to 80% */
     opacity: 0.8;
     transform: scale(1.03);
-
 }
-/* .button-secondary {
-    background-color: var(--secondary-color);
-    color: var(--shade7-color);
-} */
+
 span{
     font-size: 20px;
     font-weight: 700;
@@ -207,7 +178,7 @@ span{
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   }
 
-  .contact-page-heading {
+.contact-page-heading {
     text-align: center;
   }
 
@@ -223,56 +194,82 @@ span{
     width: 100%;
     padding: 20px;
 }
+
 .page-header__item {
     flex: 0 1 200px;
-
 }
+
 .page-header__item:last-child {
     flex-grow: 1;
     text-align: right;
 }
+
 .navigation-list {
     list-style-type: none; 
 }
+
 .navigation-list li {
     display: inline-block;
     margin-left: 15px;
-
 }
 
 .project-photo {
     display: flex;
-  gap: 20px;
-  padding: 0 20px;
-  justify-content: center; /* optional: centers the images */
-  flex-wrap: wrap;
-
+    gap: 20px;
+    padding: 0 20px;
+    justify-content: center; /* optional: centers the images */
+    flex-wrap: wrap;
 }
 
 .project-photo img {
     width: 45%; 
-  height: auto;
-  border-radius: 8px;
+    height: auto;
+    border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
-   
 }
 
 .project-photo img:hover {
     transform: scale(1.03);
   }
+
 .project-description {
     display: flex;
-  gap: 20px;
-  padding: 0 20px;
-  justify-content: center; /* optional: centers the images */
-  flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+    justify-content: center; /* optional: centers the images */
+    flex-wrap: wrap;
+}
 
-}
 .project-footer {
-flex-grow: 1;
+    flex-grow: 1;
 }
+
 .project-header {
-margin-top: auto;
+    margin-top: auto;
+}
+
+.main-case-study {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.case-study-gallery img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+table {
+    border-collapse: collapse;
+    width: 40%;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
 }
 
 

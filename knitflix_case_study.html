@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Kamila</title>
+
+    <link rel="icon" type="image/png>" href="img/favicon-16x16 2.png" sizes="16x16">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Electrolize&family=Limelight&family=Sedan:ital@0;1&family=Slackey&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <header class="page-header">
+        <!--Add Logo here-->
+        <h2>Kamilka Sarova</h2>
+
+        <nav class="main-navigation page-header__item">
+            <ul role="menubar" class="navigation-list">
+                <li role="presentation">
+                    <a href="index.html" role="menuitem"
+                        class="navigation-list__item navigation-list__item--active">Home</a>
+                </li>
+                <li role="presentation">
+                    <a href="work.html" role="menuitem" class="navigation-list__item">Projects</a>
+                </li>
+                <li role="presentation">
+                    <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
+                </li>
+                <li role="presentation">
+                    <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+                </li>
+                <li role="presentation">
+                    <a href="files/resume.pdf" role="menuitem" download class="navigation-list__item">Resume</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-case-study">
+        <h1 class="case-study-heading">Knitflix - Case Study</h1>
+        <div class="case-study-gallery"><img src="img/movies_db.png" alt="Movie API screenshot"> </div>
+        <div>
+            <h2>Overview</h2>
+            <p>Knitflix is a single-page web app where users can explore movies, directors, and genres — and build their
+                own list of favorites. It’s fast, responsive, and built with the MERN stack (MongoDB, Express, React,
+                Node.js). </p>
+        </div>
+        <div>
+            <h2>Purpose and Context</h2>
+            <p>I built Knitflix as part of of my Full Stack Web Development Course through Career Foundry to add to my
+                professional portflio. </p>
+            <ul>
+                <li>Create RESTful API that interacts with a database that stores data about different movies</li>
+                <li>Create several views (like movie details, profile, or favorites) using React</li>
+                <li>Demonstrate mastery of full-stack Javascript development.</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Objective</h2>
+            <p>Build the server-side and client-side for a movies web application. The movies application will allow
+                users to access information about various movies, directors and genres. User will be able to sign up,
+                update their profile and create a list of their favorite movies. </p>
+        </div>
+        <div class="case-study-section">
+            <div>
+                <h2>Server-Side Overview</h2> 
+                <div class="case-study-gallery"><img src="img/movie_api.png" alt=""></div>
+                <p>This is the behind-the-scenes engine of Knitflix — the part that handles data, user accounts, and all
+                    the logic that powers the app. It’s built with Node.js, Express, and MongoDB, and deployed via
+                    Heroku. Here’s how I built it:</p>
+                <h2>Step 1: Server Setup</h2>
+                <p>I started by setting up Node.js, npm, and Express. Express acts as middleware — it’s a server-side
+                    framework that handles HTTP requests between the client and server. It’s what makes the app respond
+                    when users log in, browse movies, or update their profiles.</p>
+                <h2>Step 2: Building the Database</h2>
+                <p>I created a non-relational database using MongoDB, which is great for storing flexible movie data. I
+                    designed a schema — basically a blueprint — to define how movies and users would be structured. Then
+                    I seeded the database with: 10 sample movies 5 test users This gave me a solid foundation to test
+                    the app and build out features.</p>
+                <h2>Step 3: Connecting API to Database</h2>
+                <p>To connect the database to the API, I used Mongoose, a library that helps translate between Node.js
+                    and MongoDB. I wrote the business logic to handle things like: Fetching movie data Adding/removing
+                    favorites Updating user info Each API endpoint was designed to follow RESTful principles and return
+                    clean, consistent data.</p>
+                <h2>Step 4: Authentication & Authorization</h2>
+                <p>To keep user data safe, I added: Basic HTTP authentication for initial login JWT tokens for secure
+                    access to protected routes Passport.js to handle user sessions and token verification Once
+                    authenticated, users could safely interact with the API — like saving favorites or updating their
+                    profile.</p>
+                <h2>Deployment & Testing</h2>
+                <p>I deployed the API to Heroku, making it accessible to the React client. I used Postman throughout
+                    development to test endpoints, debug responses, and verify authentication flows.</p>
+                <h2>Tools Used:</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Server Framework</td>
+                            <td>Node.js, Express</td>
+                        </tr>
+                        <tr>
+                            <td>Database</td>
+                            <td>MongoDB, Mongoose</td>
+                        </tr>
+                        <tr>
+                            <td>Auth & Security</td>
+                            <td>Passport, JWT</td>
+                        </tr>
+                        <tr>
+                            <td>Deployment</td>
+                            <td>Heroku</td>
+                        </tr>
+                        <tr>
+                            <td>Testing</td>
+                            <td>Postman</td>
+                        </tr>
+                    </tbody>
+                
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <p>Find me on</p>
+        <div class="social-media">
+            <!--Github logo-->
+            <a href="https://github.com/KamilaKnits"><img src="img/github.svg" alt="Github"></a>
+            <!--LinkedIn logo-->
+            <a href="https://www.linkedin.com/in/kamilka-sarova-4274911/"><img src="img/linkedin.svg"
+                    alt="LinkedIn"></a>
+        </div>
+    </footer>
+    <script src="js/tota11y.min.js"></script>
+
+</body>
+
+</html>
