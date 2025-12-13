@@ -54,7 +54,7 @@
             
             <h1 class="case-study-heading">Knitflix - Case Study</h1>
 
-            <div class="case-study-gallery"><img src="img/movies_db.png" alt="Movie API screenshot"> </div>
+            <div class="case-study-gallery"><img src="img/knitflix _client.png" alt=""> </div>
             <div>
                 <h2>Overview</h2>
                 <p>Knitflix is a single-page web app where users can explore movies, directors, and genres — and build
@@ -70,7 +70,7 @@
                     my
                     professional portflio. </p>
                 <ul>
-                    <li>Create RESTful API that interacts with a database that stores data about different movies</li>
+                    <li></li>
                     <li>Create several views (like movie details, profile, or favorites) using React</li>
                     <li>Demonstrate mastery of full-stack Javascript development.</li>
                 </ul>
@@ -86,49 +86,51 @@
 
         </div>
         <div class="case-study-section">
-
-            <h2>Server-Side Overview</h2>
-            <div class="case-study-gallery"><img src="img/movie_api.png" alt=""></div>
-            <p>This is the behind-the-scenes engine of Knitflix — the part that handles data, user accounts, and all
-                the logic that powers the app. It’s built with Node.js, Express, and MongoDB, and deployed via
-                Heroku. Here’s how I built it:</p>
-            <h2>Step 1: Server Setup</h2>
-            <p>I started by setting up Node.js, npm, and Express. Express acts as middleware — it’s a server-side
-                framework that handles HTTP requests between the client and server. It’s what makes the app respond
-                when users log in, browse movies, or update their profiles.</p>
-            <h2>Step 2: Building the Database</h2>
-            <p>I created a non-relational database using MongoDB, which is great for storing flexible movie data. I
-                designed a schema — basically a blueprint — to define how movies and users would be structured. Then
-                I seeded the database with: 10 sample movies 5 test users This gave me a solid foundation to test
-                the app and build out features.</p>
-            <h2>Step 3: Connecting API to Database</h2>
-            <p>To connect the database to the API, I used Mongoose, a library that helps translate between Node.js
-                and MongoDB. I wrote the business logic to handle things like: Fetching movie data Adding/removing
-                favorites Updating user info Each API endpoint was designed to follow RESTful principles and return
-                clean, consistent data.</p>
-            <h2>Step 4: Authentication & Authorization</h2>
-            <p>To keep user data safe, I added: Basic HTTP authentication for initial login JWT tokens for secure
-                access to protected routes Passport.js to handle user sessions and token verification Once
-                authenticated, users could safely interact with the API — like saving favorites or updating their
-                profile.</p>
-            <h2>Deployment & Testing</h2>
-            <p>I deployed the API to Heroku, making it accessible to the React client. I used Postman throughout
-                development to test endpoints, debug responses, and verify authentication flows.</p>
+            <h2>Clien-Side Overview</h2>
+            <div class="case-study-gallery"><img src="img/Knitflix_home_page.png" alt=""></div>
+            <p>This is the front-end of Knitflix — the part users interact with. It’s built as a Single Page 
+                Application (SPA) using React, and connects to the server via a REST API. Here’s how I built it, 
+                step by step:</p>
+            <h2>Step 1: Project Setup</h2>
+            <p>I started by setting up React, Node.js, npm, and Parcel. Since React is component-based, 
+                I brought in Parcel early to streamline the build process. Parcel handles transpiling — 
+                converting JSX (React’s syntax) into regular JavaScript so browsers can understand it.</p>
+            <h2>Step 2: Building the Views</h2>
+            <p>I created a separate React Component for each major view in the app:
+                <ul>
+                    <li>Login View</li>
+                    <li>Signup View</li>
+                    <li>Movie View - displays movie details</li>
+                    <li>Profile View - shows user info and favorites</li>
+                </ul>
+                <p>Each component connects to the backend using React Hooks to fetch and manage
+                    data from the API.</p>
+            </p>
+            <h2>Step 3: Forms, Favorites and Validation</h2>
+            
+                <li>Built React forms for login and signup, with validation to ensure clean input.</li>
+                <li>Added authentication logic so user login info is stored in localStorage until logout.</li>
+                <li>Displayed each movie as a card, making it easy to browse.</li>
+                <li>Implemented navigation between views using React Router for smooth transitions.</li>
+            <h2>Step 4: Styling and Deployment</h2>
+                <li>Styled the app using React Bootstrap, including a grid system to lay out movie cards responsively.</li>
+                <li>Hosted the final app on Netlify for fast, reliable deployment.</li>
+    
             <h2>Tools Used:</h2>
         </div>
             <table class="case-study-table">
                 <tbody>
                     <tr>
-                        <td>Server Framework</td>
-                        <td>Node.js, Express</td>
+                        <td>Build Tool</td>
+                        <td>Parcel</td>
                     </tr>
                     <tr>
-                        <td>Database</td>
-                        <td>MongoDB, Mongoose</td>
+                        <td>UI Styling</td>
+                        <td>React Bootstrap</td>
                     </tr>
                     <tr>
-                        <td>Auth & Security</td>
-                        <td>Passport, JWT</td>
+                        <td>State Management</td>
+                        <td>Redux</td>
                     </tr>
                     <tr>
                         <td>Deployment</td>
